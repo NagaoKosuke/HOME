@@ -5,3 +5,5 @@ def getCSV( code , year):
         data ={'code':str(code),'year':str(year)},
         header = {'referer':'http://kabuoji3.com/sitemap/sitemap-index.xml'},
         "User-Agent":"Mo"
+            "Accept":"()"}
+        if('')
