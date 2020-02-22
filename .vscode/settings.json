@@ -1,0 +1,33 @@
+{
+"python.venvPath": ".venv",
+"python.pythonPath":"C:\\Users\\KOSUKE\\.conda\\envs\\Analyse_Stock\\python.exe",
+"files.watcherExclude":{
+    "**/Analyse_Stock/**":true
+    },
+
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 1000,
+"python.linting.lintOnSave": true,
+"python.linting.pylintEnabled": false,
+"python.linting.flake8Enabled": true,
+
+"python.linting.flake8Args":[
+    "--ignore=W293, W504",
+    "--max-line-length=88",
+    "--max-complexity=20"
+],
+"python.linting.mypyEnabled": true,
+"python.formatting.provider": "black",
+
+/* "python.formatting.provider": "autopep8",
+"python.formatting.autopep8Args": [
+    "--aggressive", "--aggressive",
+], */
+"autoDocstring.docstringFormat": "google",
+
+"recommendations": [
+    "ms-python.python"
+]
+"files.trimTrailingWhitespace": true,
+"files.trimFinalNewlines": true,
+}
