@@ -86,8 +86,8 @@ data.index = data.index.date
 
 
 fig = make_subplots(rows=4, cols=2,    
-                    shared_xaxes=True,
-                    vertical_spacing=0.2,
+                    shared_xaxes=False,
+                    vertical_spacing=0.05,
                     subplot_titles=(title)
                      )
 
@@ -100,15 +100,16 @@ for k,(v,char) in enumerate(zip(rics,title)):
                     high=data[v]['HIGH'],
                     low=data[v]['LOW'],
                     close=data[v]['CLOSE'],
-                    name=char,
-                    meta={'sliders':None}
+                    name=char
                 )
-    fig.update_layout(xaxis_rangeslider_visible=False)
     fig.append_trace(trace,divmod(k,2)[0]+1,divmod(k,2)[1]+1)
+    k += 1
+    layout_txt = dict(rangeslider=dict(visible=False))
+    fig['layout']['xaxis'+str(k)].update(layout_txt)
 
 fig.update_layout(
-    xaxis_rangeslider_visible=False,
-    height=4000,
+    # xaxis_rangeslider_visible=False,
+    height=1500,
     showlegend=False,
     title_text='Look Back a week'
 )
